@@ -1,4 +1,4 @@
-<div class="container">
+<!--<div class="container">
 
     <flex-slider flex-slide="s in mySlides" prev-text="" next-text="">
         <li>
@@ -28,4 +28,25 @@
         </div>
     </div>
 
-</div>
+</div>-->
+<section>
+    <div class="">
+        <flex-slider flex-slide="s in mySlides track by $index" prev-text="" next-text="">
+            <li>
+                <img ng-src="{{s}}" class="img-full">
+            </li>
+        </flex-slider>
+    </div>
+    <div>
+        <button class="btn btn-default">
+            start your free test here
+        </button>
+    </div>
+</section>
+<section>
+    <div>
+        <img src="frontend/img/banner/bg-home.jpg" alt="" class="img-responsive">
+    </div>
+</section>
+<section>
+</section>

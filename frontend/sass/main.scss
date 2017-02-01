@@ -21,10 +21,9 @@ $brand-info: #000072 !default;
     src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
 
-body {
-    padding-top: 70px;
-}
-
+// body {
+//     padding-top: 70px;
+// }
 img.loading {
     text-align: center;
     opacity: 1;
@@ -126,5 +125,6 @@ footer {
     display: block;
 }
 
+// Home Page 
 @import "fancybox-override";
 @import "mobile";
