@@ -55,6 +55,22 @@ a,
     @include transition(all ease 300ms);
 }
 
+a {
+    color: green;
+    &:hover {
+        text-decoration: none;
+        color: darken(green, 50%);
+    }
+}
+
+ul {
+    padding: 0;
+    li {
+        display: inline-block;
+        text-decoration: none;
+    }
+}
+
 footer {
     font-size: 12px;
     background-color: #eee;
@@ -123,6 +139,31 @@ footer {
 .img-full {
     width: 100%;
     display: block;
+}
+
+header {
+    height: 60px;
+    .logo {
+        height: 60px;
+        img {
+            height: 100%;
+            margin: 0 auto;
+        }
+    }
+    form {
+        height: 60px;
+        display: flex;
+        align-items: center;
+    }
+    .registration ul {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        li a {
+            font-size: 18px;
+        }
+    }
 }
 
 // Home Page 

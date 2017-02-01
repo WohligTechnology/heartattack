@@ -1,40 +1,30 @@
 <header>
-    <!--<nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-                <a class="navbar-brand" ui-sref="home"><img src="/frontend/img/logo.png" alt="logo" width="20"> </a>
-            </div>
-            <div class="collapse navbar-collapse" id="nav-collapse">
-                <div ng-include="template.menu" class="template menu"></div>
-            </div>
-        </div>
-    </nav>-->
     <div class="container">
         <div class="row">
             <div class="col-md-2">
-                <img src="frontend/img/icons/logo.png" alt="" class="img-responsive logo">
-            </div>
-            <div class="col-md-8">
-                <div class="input-group">
-                    <input type="text" class="form-control">
-                    <div class="input-group-btn">
-                        <button class="btn btn-default">
-                            <i class="fa fa-search" aria-hidden="true"></i>
-                        </button>
-                    </div>
+                <div class="logo">
+                    <img src="frontend/img/icons/logo.png" alt="" class="img-responsive">
                 </div>
             </div>
-            <div class="col-md-2 ">
-                <ul>
-                    <li>Sign Up</li>
-                    <li>Log In</li>
-                </ul>
+            <div class="col-md-8">
+                <form>
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-2">
+                <div class="registration">
+                    <ul>
+                        <li><a href="">Sign Up</a></li>
+                        <li><a href="">Log In</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
