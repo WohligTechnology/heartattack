@@ -14,6 +14,14 @@ $brand-success: #84ce3c !default;
 $brand-warning: #ffec39 !default;
 $brand-danger: #fc483f !default;
 $brand-info: #000072 !default;
+// custom variables
+$white: #fff;
+$black: #000;
+$bg-color: #3bb874;
+$btn-color: #268855;
+$btn-active-color: #ce8c1e;
+$content-bg-color: #b6dcc7;
+$footer-bg-color: #404040;
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @font-face {
     font-family: 'Glyphicons Halflings';
@@ -55,6 +63,15 @@ a,
     @include transition(all ease 300ms);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
 a {
     color: green;
     &:hover {
@@ -65,6 +82,7 @@ a {
 
 ul {
     padding: 0;
+    margin: 0;
     li {
         display: inline-block;
         text-decoration: none;
@@ -73,7 +91,9 @@ ul {
 
 footer {
     font-size: 12px;
-    background-color: #eee;
+    background-color: $footer-bg-color;
+    color: #fff;
+    border-bottom: 6px solid $bg-color;
     padding: 10px 0;
     p {
         margin: 0;
@@ -141,31 +161,232 @@ footer {
     display: block;
 }
 
+// Custom Css Starts Here
 header {
-    height: 60px;
     .logo {
-        height: 60px;
         img {
-            height: 100%;
             margin: 0 auto;
         }
     }
-    form {
-        height: 60px;
-        display: flex;
-        align-items: center;
+    .search {
+        margin-top: 35px;
     }
-    .registration ul {
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        li a {
+    .registration {
+        margin-top: 40px;
+        ul li a {
             font-size: 18px;
+        }
+        li+li {
+            a {
+                border-left: 1px solid black;
+                padding-left: 5px;
+            }
         }
     }
 }
 
-// Home Page 
+.green-navbar {
+    background: $bg-color;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 0;
+    .navbar-nav>li>a {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+}
+
+// Home Page
+.homeslider {
+    .flexslider {
+        margin: 0;
+        border: none;
+        z-index: -1;
+        .flex-control-nav {
+            position: absolute;
+            top: 50%;
+            right: 50px;
+            text-align: center;
+            z-index: 99;
+            width: 0;
+            li {
+                margin: 6px 0;
+                display: block;
+            }
+        }
+    }
+    .flex-direction-nav {
+        display: none;
+    }
+    .flex-direction-nav a:before {
+        content: '';
+    }
+    .btnblock {
+        margin-top: -68px;
+        text-align: center;
+        margin-bottom: 100px;
+        .img-pulse {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    .btntest {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        .btn--testcolor {
+            text-transform: uppercase;
+            background: $bg-color;
+            padding: 24px 90px;
+            font-size: 28px;
+            color: #fff;
+            border-radius: 10px;
+            // position: relative;
+            // &:before {
+            //     content: url('../img/icons/pulse-left.png');
+            //     position: absolute;
+            //     top: -30%;
+            //     left: -45%;
+            //     z-index: 99;
+            // }
+            // &:after {
+            //     content: url('../img/icons/pulse-right.png');
+            //     position: absolute;
+            //     top: -30%;
+            //     right: -45%;
+            //     z-index: 99;
+            // }
+        }
+    }
+}
+
+.video {
+    position: relative;
+    .video__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.75);
+    }
+    .video__btn {
+        h2 {
+            font-size: 42px;
+            span {
+                color: $bg-color;
+            }
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 20px;
+            &:before {
+                content: '';
+                width: 60px;
+                border: 2px solid $bg-color;
+                display: block;
+                margin: 0 auto 15px;
+            }
+        }
+        img {
+            margin: 0 auto;
+        }
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%,
+        -50%));
+    }
+}
+
+.content-sec {
+    .margin__bottom {
+        margin-bottom: 20px;
+    }
+    .padd0 {
+        padding: 0;
+    }
+    .marg0 {
+        margin: 0;
+    }
+    margin: 40px 0;
+    .content__head,
+    {
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 30px;
+        // background: $bg-color;
+    }
+    .content-sec-text {
+        text-align: center;
+        p {
+            margin: 0;
+        }
+    }
+    .bg-lightgreen {
+        background: $content-bg-color;
+    }
+    .grid__img {
+        img {
+            width: 100%;
+        }
+    }
+    .gird__vertcenter {
+        padding: 50px 16px 0;
+        p {
+            &:after {
+                content: '';
+                border: 1px solid;
+                width: 60px;
+                display: block;
+                margin: 20px auto 0;
+            }
+        }
+    }
+    // .bottom__line {
+    //     &:after {
+    //         content: '';
+    //     }
+    // }
+}
+
+.bg-rect {
+    background-image: url('../img/banner/rect-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.btn-green {
+    @include button-variant($white,
+    $btn-color,
+    $btn-color);
+    border-radius: 5px;
+}
+
+.footlink {
+    ul li {
+        padding: 0 5px 0 0;
+        font-size: 14px;
+        a {
+            color: $white;
+        }
+    }
+    ul li+li {
+        a {
+            border-left: 1px solid #fff;
+            padding: 0 0 0 10px;
+        }
+    }
+}
+
+.socialicons {
+    .socialicons__text,
+    .socialicons__icon {
+        display: inline-flex;
+        vertical-align: middle;
+    }
+}
+
 @import "fancybox-override";
 @import "mobile";

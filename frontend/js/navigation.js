@@ -2,7 +2,7 @@ var navigationservice = angular.module('navigationservice', [])
 
 .factory('NavigationService', function () {
     var navigation = [{
-        name: "Home",
+        name: "icu orientation",
         classis: "active",
         anchor: "home",
         subnav: []
@@ -12,11 +12,26 @@ var navigationservice = angular.module('navigationservice', [])
             //     anchor: "home"
             // }]
     }, {
-        name: "Form",
+        name: "primary exam",
         classis: "active",
         anchor: "form",
         subnav: []
-    }];
+    }, {
+        name: "icu fellowship exam",
+        classis: "active",
+        anchor: "form",
+        subnav: []
+    }, {
+        name: "edic",
+        classis: "active",
+        anchor: "form",
+        subnav: []
+    }, {
+        name: "intensive care nursing",
+        classis: "active",
+        anchor: "form",
+        subnav: []
+    }, ];
 
     return {
         getnav: function () {

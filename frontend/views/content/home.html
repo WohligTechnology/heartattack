@@ -30,74 +30,127 @@
 
 </div>-->
 <section>
-	<div class="">
+	<div class="homeslider">
 		<flex-slider flex-slide="s in mySlides track by $index" prev-text="" next-text="">
 			<li>
 				<img ng-src="{{s}}" class="img-full">
 			</li>
 		</flex-slider>
-	</div>
-	<div>
-		<button class="btn btn-default">
-            start your free test here
-        </button>
+		<div class="btnblock">
+			<div class="img-pulse">
+				<img src="frontend/img/icons/pulse-left.png" alt="" class="img-responsive">
+			</div>
+			<div class="btntest">
+				<button class="btn btn-default btn--testcolor">
+						start your free test here
+					</button>
+			</div>
+			<div class="img-pulse">
+				<img src="frontend/img/icons/pulse-right.png" alt="" class="img-responsive">
+			</div>
+		</div>
 	</div>
 </section>
 <section>
-	<div>
-		<img src="frontend/img/banner/bg-home.jpg" alt="" class="img-responsive">
+	<div class="video">
+		<div class="bg-play">
+			<img src="frontend/img/banner/bg-play.png" alt="" class="img-responsive">
+			<div class="video__overlay">
+			</div>
+		</div>
+		<div class="video__btn">
+			<h2><span>Lorem </span>Ipsium</h2>
+			<img src="frontend/img/icons/play.png" alt="" class="img-responsive">
+		</div>
 	</div>
 </section>
-<section>
+<section class="bg-rect">
 	<div class="container">
-		<h2>About Us</h2>
-		<div class="row">
-			<div class="col-md-6">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quasi atque perferendis tempora magnam soluta odit minus
-				ad error. Iusto tenetur consectetur, repellat voluptatem vitae suscipit atque voluptas delectus magni.
+		<div class="content-sec">
+			<div class="margin__bottom">
+				<h2 class="content__head">About Us</h2>
 			</div>
-			<div class="col-md-6">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate perferendis aut accusantium mollitia illo, reprehenderit
-				suscipit similique autem, consequuntur nulla sequi voluptatum. Nemo quis accusantium aliquid repellat, maxime magni dignissimos!
-			</div>
-			<div class="col-md-12">
-				<button class="btn btn-default">know more</button>
-			</div>
-		</div>
-	</div>
-</section>
-<section>
-	<div class="container">
-		<h2>Testimonials</h2>
-		<div>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum fuga adipisci nam harum a voluptates porro ad quaerat
-				molestiae
-			</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-		</div>
-		<div class="row">
-			<div class="col-md-6">
-				<img src="frontend/img/banner/img-1.jpg" alt="" class="img-respponsive">
-			</div>
-			<div class="col-md-6">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus sint optio consequuntur, repudiandae non, et earum amet,
-				pariatur dignissimos, natus fuga aspernatur! Incidunt recusandae nostrum necessitatibus, veniam, ipsum alias minus!
+			<div class="row">
+				<div class="col-md-6">
+					<div>
+						<p class="text-justify">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quasi atque perferendis tempora magnam soluta odit minus
+							ad error. Iusto tenetur consectetur, repellat voluptatem vitae suscipit atque voluptas delectus magni.
+						</p>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div>
+						<p class="text-justify">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quasi atque perferendis tempora magnam soluta odit minus
+							ad error. Iusto tenetur consectetur, repellat voluptatem vitae suscipit atque voluptas delectus magni.
+						</p>
+					</div>
+					<div class="pull-right">
+						<button class="btn btn-default btn-green text-uppercase">know more</button>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-3">
-				<img src="frontend/img/banner/img-2.png" alt="" class="img-respponsive">
+		<div class="content-sec">
+			<div class="margin__bottom">
+				<h2 class="content__head">Testimonials</h2>
 			</div>
-			<div class="col-md-3">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo doloremque facilis velit porro officiis tempora tenetur
-				dolorum repudiandae placeat, praesentium earum adipisci aut numquam cupiditate perspiciatis laborum ipsam voluptas provident.
+			<div class="text-center">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum fuga adipisci nam harum a voluptates porro ad quaerat
+					molestiae
+				</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 			</div>
-			<div class="col-md-3">
-				<img src="frontend/img/banner/img-3.png" alt="" class="img-respponsive">
+			<div class="bg-lightgreen">
+				<div class="row marg0">
+					<div class="col-md-6 padd0">
+						<div class="grid__img">
+							<img src="frontend/img/banner/img-1.jpg" alt="" class="img-respponsive">
+						</div>
+					</div>
+					<div class="col-md-6 padd0">
+						<div class="gird__vertcenter">
+							<h3 class="text-uppercase text-center"> Lorem ipsium </h3>
+							<p class="text-justify bottom__line">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo doloremque facilis velit porro officiis tempora tenetur
+								dolorum repudiandae placeat.
+							</p>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="col-md-3">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam cumque saepe dolore officia explicabo pariatur, hic sit.
-				Repellat fugit, ex, rerum esse nobis magnam libero cumque voluptatum amet autem magni.
+			<div class="bg-lightgrey">
+				<div class="row marg0">
+					<div class="col-md-3 padd0">
+						<div class="grid__img">
+							<img src="frontend/img/banner/img-2.png" alt="" class="img-respponsive">
+						</div>
+					</div>
+					<div class="col-md-3 padd0">
+						<div class="gird__vertcenter">
+							<h3 class="text-uppercase text-center"> Lorem ipsium </h3>
+							<p class="text-justify">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo doloremque facilis velit porro officiis tempora tenetur
+								dolorum repudiandae placeat.
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 padd0">
+						<div class="grid__img">
+							<img src="frontend/img/banner/img-3.jpg" alt="" class="img-respponsive">
+						</div>
+					</div>
+					<div class="col-md-3 padd0">
+						<div class="gird__vertcenter">
+							<h3 class="text-uppercase text-center"> Lorem ipsium </h3>
+							<p class="text-justify">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo doloremque facilis velit porro officiis tempora tenetur
+								dolorum repudiandae placeat.
+							</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
