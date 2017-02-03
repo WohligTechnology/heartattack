@@ -410,13 +410,29 @@ header {
 }
 
 // signup Moda css
-.login-signup-tab {
-    .nav-tabs.nav-justified>.active>a {
-        background: $bg-color;
-        color: $white;
+.login-signup-holder {
+    .modal-minheight {
+        min-height: 350px;
     }
-    ul {
-        margin-top: -42px;
+    .login-signup-tab {
+        .nav-tabs.nav-justified>.active>a {
+            background: $bg-color;
+            color: $white;
+            border: none;
+        }
+        .nav-tabs.nav-justified>li>a {
+            background: $white;
+        }
+        ul {
+            margin-top: -40px;
+        }
+    }
+    .company-detail {
+        .modal__logo {
+            img {
+                width: 150px;
+            }
+        }
     }
 }
 

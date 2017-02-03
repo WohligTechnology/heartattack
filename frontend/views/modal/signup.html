@@ -1,14 +1,16 @@
 <div class="login-signup-holder">
-    <div class="row marg0">
+    <div class="row marg0 modal-minheight">
         <div class="col-md-5">
             <div class="company-detail">
-                <h2>
-                    <img src="frontend/img/icons/logo.png" alt="" class="img-responsive">
+                <div>
+                    <div class="modal__logo">
+                        <img src="frontend/img/icons/logo.png" alt="" class="img-responsive">
+                    </div>
                     <h3>Welcome</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit quam facere at molestiae libero veritatis
                         accusantium natus animi. Reiciendis tempora, quae sit quasi quidem repellat iusto tempore cupiditate
                         magni temporibus.</p>
-                </h2>
+                </div>
             </div>
         </div>
         <div class="col-md-7">
@@ -16,7 +18,11 @@
                 <div class="login-signup-tab">
                     <uib-tabset justified="true" active="tabActive">
                         <uib-tab>
-                            <uib-tab-heading>Log in</uib-tab-heading>
+                            <uib-tab-heading>
+                                <h5 class="tab-heading text-uppercase">
+                                    Log in
+                                </h5>
+                            </uib-tab-heading>
                             <div class="login-form minheight">
                                 <div class="row marg0">
                                     <div class="col-md-offset-2 col-md-8">
@@ -32,7 +38,9 @@
                         </uib-tab>
                         <uib-tab>
                             <uib-tab-heading>
-                                signup
+                                <h5 class="tab-heading text-uppercase">
+                                    signup
+                                </h5>
                             </uib-tab-heading>
                             <div class="signup-form minheight">
                                 <h5>content signp</h5>
