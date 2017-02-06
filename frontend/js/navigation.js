@@ -4,7 +4,7 @@ var navigationservice = angular.module('navigationservice', [])
     var navigation = [{
         name: "icu orientation",
         classis: "active",
-        anchor: "home",
+        anchor: "icu-orientation",
         subnav: []
             // subnav: [{
             //     name: "Subnav1",

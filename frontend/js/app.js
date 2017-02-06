@@ -18,6 +18,16 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
             templateUrl: "frontend/views/template.html",
             controller: 'HomeCtrl'
         })
+        .state('orientation', {
+            url: "/",
+            templateUrl: "frontend/views/template.html",
+            controller: 'orientationCtrl'
+        })
+        .state('icu-orientation', {
+            url: "/",
+            templateUrl: "frontend/views/template.html",
+            controller: 'icuOrientationCtrl'
+        })
         .state('form', {
             url: "/form",
             templateUrl: "frontend/views/template.html",

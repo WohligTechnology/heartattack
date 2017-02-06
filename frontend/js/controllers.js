@@ -28,7 +28,20 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $scope.formSubmitted = true;
         }
     })
+    .controller('orientationCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+        $scope.template = TemplateService.changecontent("orientation"); //Use same name of .html file
+        $scope.menutitle = NavigationService.makeactive("Orientation"); //This is the Title of the Website
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
 
+    })
+    .controller('icuOrientationCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+        $scope.template = TemplateService.changecontent("icu-orientation"); //Use same name of .html file
+        $scope.menutitle = NavigationService.makeactive("ICU Orientation"); //This is the Title of the Website
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+
+    })
     .controller('headerctrl', function ($scope, TemplateService, $uibModal) {
         $scope.template = TemplateService;
         $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
