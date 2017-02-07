@@ -19,12 +19,12 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
             controller: 'HomeCtrl'
         })
         .state('orientation', {
-            url: "/",
+            url: "/orientation",
             templateUrl: "frontend/views/template.html",
             controller: 'orientationCtrl'
         })
         .state('icu-orientation', {
-            url: "/",
+            url: "/icu-orientation",
             templateUrl: "frontend/views/template.html",
             controller: 'icuOrientationCtrl'
         })
