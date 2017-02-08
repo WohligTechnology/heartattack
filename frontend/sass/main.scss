@@ -687,7 +687,7 @@ header {
         .section__head {
             text-align: center;
             min-height: 253px;
-            padding: 28px 0;
+            padding: 26px 0;
             // background: #e3e3e3;
             h2 {
                 text-transform: uppercase;
@@ -721,6 +721,30 @@ header {
                     border: 2px solid $white;
                 }
             }
+        }
+    }
+}
+
+.img-footer-section {
+    margin-top: 50px;
+    min-height: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #e3e3e3;
+    h1 {
+        color: $bg-color;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+    .caption-text {
+        padding: 16px 0;
+        p {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
         }
     }
 }

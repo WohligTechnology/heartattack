@@ -79,13 +79,16 @@
             </div>
         </div>
         <div class="img-footer-section">
+            <div>
+                <h1>Switch To:</h1>
+            </div>
             <div class="img-repeatfooter">
-                <div class="row marg0" ng-repeat="data1 in footerArray">
+                <div class="row" ng-repeat="data1 in footerArray">
                     <!--<pre>{{footarray.thumbnail}}</pre>-->
                     <div class=" col-md-4 " ng-repeat="data in data1 ">
                         <div class="thumbnail padd0 ">
                             <img ng-src="{{data.image}} " alt=" " class="img-responsive ">
-                            <div class="caption ">
+                            <div class="caption caption-text">
                                 <p>{{data.thumbnail}}</p>
                             </div>
                         </div>
