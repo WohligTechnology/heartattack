@@ -28,6 +28,11 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
             templateUrl: "frontend/views/template.html",
             controller: 'icuOrientationCtrl'
         })
+        .state('airway-management', {
+            url: "/airway-management",
+            templateUrl: "frontend/views/template.html",
+            controller: 'airwayCtrl'
+        })
         .state('form', {
             url: "/form",
             templateUrl: "frontend/views/template.html",

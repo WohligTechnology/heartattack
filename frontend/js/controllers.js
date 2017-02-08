@@ -1,21 +1,21 @@
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'ui.swiper'])
 
-    .controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal) {
-        $scope.template = TemplateService.changecontent("home"); //Use same name of .html file
-        $scope.menutitle = NavigationService.makeactive("Home"); //This is the Title of the Website
-        TemplateService.title = $scope.menutitle;
-        $scope.navigation = NavigationService.getnav();
+.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal) {
+    $scope.template = TemplateService.changecontent("home"); //Use same name of .html file
+    $scope.menutitle = NavigationService.makeactive("Home"); //This is the Title of the Website
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
 
-        $scope.mySlides = [
-            'frontend/img/banner/bg-home.jpg',
-            'frontend/img/banner/bg-home.jpg',
-            'frontend/img/banner/bg-home.jpg',
-            'frontend/img/banner/bg-home.jpg'
-        ];
+    $scope.mySlides = [
+        'frontend/img/banner/bg-home.jpg',
+        'frontend/img/banner/bg-home.jpg',
+        'frontend/img/banner/bg-home.jpg',
+        'frontend/img/banner/bg-home.jpg'
+    ];
 
-    })
+})
 
-    .controller('FormCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+.controller('FormCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("form"); //Use same name of .html file
         $scope.menutitle = NavigationService.makeactive("Form"); //This is the Title of the Website
         TemplateService.title = $scope.menutitle;
@@ -64,15 +64,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         console.log('$scope.myArray ', $scope.myArray);
 
         $scope.imgFootscetion = [{
-            image: "frontend/img/orientation/switch-img-1.jpg",
-            thumbnail: "advanced"
-        }, {
-            image: "frontend/img/orientation/switch-img-2.jpg",
-            thumbnail: "cardiothoracic icu rotation"
-        }, {
-            image: "frontend/img/orientation/switch-img-3.jpg",
-            thumbnail: "european diploma in intensice care preparation pack"
-        }
+                image: "frontend/img/orientation/switch-img-1.jpg",
+                thumbnail: "advanced"
+            }, {
+                image: "frontend/img/orientation/switch-img-2.jpg",
+                thumbnail: "cardiothoracic icu rotation"
+            }, {
+                image: "frontend/img/orientation/switch-img-3.jpg",
+                thumbnail: "european diploma in intensice care preparation pack"
+            }
             //  {
             //     image: "frontend/img/orientation/switch-img-1.jpg",
             //     thumbnail: "image2"
@@ -83,13 +83,55 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         ]
         $scope.footerArray = _.chunk($scope.imgFootscetion, 3);
     })
-
-
     .controller('icuOrientationCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("icu-orientation"); //Use same name of .html file
         $scope.menutitle = NavigationService.makeactive("ICU Orientation"); //This is the Title of the Website
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
+
+    })
+    .controller('airwayCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+        $scope.template = TemplateService.changecontent("airway-management"); //Use same name of .html file
+        $scope.menutitle = NavigationService.makeactive("Airway Management"); //This is the Title of the Website
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+        // ng-repeat for button
+        $scope.btnSection = [{
+            name: "Airway Management-I",
+            btnname: "buy for $3"
+        }, {
+            name: "Airway Management-II",
+            btnname: "buy for $3"
+        }, {
+            name: "Airway Management-III",
+            btnname: "buy for $3"
+        }, {
+            name: "Airway Management-IV",
+            btnname: "buy for $3"
+        }, {
+            name: "Airway Management-V",
+            btnname: "buy for $3"
+        }, {
+            name: "Airway Management-VI",
+            btnname: "buy for $3"
+        }]
+        $scope.btnrepeat = _.chunk($scope.btnSection, 3);
+        // ng-repeat for footsection
+        $scope.imgFootscetion = [{
+            image: "frontend/img/airway/airway-img-1.png",
+            thumbnail: "blood test"
+        }, {
+            image: "frontend/img/airway/airway-img-2.png",
+            thumbnail: "ct surgery"
+        }, {
+            image: "frontend/img/airway/airway-img-3.png",
+            thumbnail: "cardiology"
+        }, {
+            image: "frontend/img/airway/airway-img-4.png",
+            thumbnail: "haematology"
+        }]
+
+        $scope.footerArray = _.chunk($scope.imgFootscetion, 4);
 
     })
     .controller('headerctrl', function ($scope, TemplateService, $uibModal) {
@@ -111,27 +153,27 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         };
     })
 
-    .controller('languageCtrl', function ($scope, TemplateService, $translate, $rootScope) {
+.controller('languageCtrl', function ($scope, TemplateService, $translate, $rootScope) {
 
-        $scope.changeLanguage = function () {
-            console.log("Language CLicked");
+    $scope.changeLanguage = function () {
+        console.log("Language CLicked");
 
-            if (!$.jStorage.get("language")) {
+        if (!$.jStorage.get("language")) {
+            $translate.use("hi");
+            $.jStorage.set("language", "hi");
+        } else {
+            if ($.jStorage.get("language") == "en") {
                 $translate.use("hi");
                 $.jStorage.set("language", "hi");
             } else {
-                if ($.jStorage.get("language") == "en") {
-                    $translate.use("hi");
-                    $.jStorage.set("language", "hi");
-                } else {
-                    $translate.use("en");
-                    $.jStorage.set("language", "en");
-                }
+                $translate.use("en");
+                $.jStorage.set("language", "en");
             }
-            //  $rootScope.$apply();
-        };
+        }
+        //  $rootScope.$apply();
+    };
 
 
-    })
+})
 
-    ;
+;

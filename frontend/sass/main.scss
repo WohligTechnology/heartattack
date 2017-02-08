@@ -281,10 +281,12 @@ header {
 }
 
 .video,
-.img-section__img {
+.img-section__img,
+.btn-relative {
     position: relative;
     .video__overlay,
-    .img__overlay {
+    .img__overlay,
+    .btn__overlay {
         position: absolute;
         top: 0;
         left: 0;
@@ -323,6 +325,10 @@ header {
 
 .padd0 {
     padding: 0;
+}
+
+.padd2 {
+    padding: 2px;
 }
 
 .marg0 {
@@ -727,15 +733,13 @@ header {
 
 .img-footer-section {
     margin-top: 50px;
-    min-height: 75px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: #e3e3e3;
     h1 {
         color: $bg-color;
         text-transform: uppercase;
         margin-bottom: 5px;
+    }
+    .thumbnail-radius {
+        border-radius: 0;
     }
     .caption-text {
         padding: 16px 0;
@@ -746,6 +750,78 @@ header {
             text-transform: uppercase;
             text-align: center;
         }
+        min-height: 75px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: #e3e3e3;
+    }
+}
+
+// Airway Management Css
+.airway-page {
+    .heading-name {
+        @extend .heading-name;
+        h1 {
+            &:before {
+                left: 25%;
+            }
+            &:after {
+                right: 25%;
+            }
+        }
+    }
+    .btn-section {
+        .btn-management {
+            p {
+                margin: 0;
+                font-size: 18px;
+                text-transform: uppercase;
+                font-weight: bold;
+                color: #404040;
+            }
+        }
+        .bg-grey {
+            background: #e3e3e3;
+            padding: 14px 12px;
+            text-align: left;
+        }
+        .block-inline {
+            display: inline-block;
+            vertical-align: middle;
+            .btn-green {
+                font-size: 12px;
+                padding: 3px 10px;
+                border-radius: 2px;
+            }
+        }
+    }
+    .btn__complete {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: #fff;
+        @include transform( translate(-50%,
+        -50%));
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 18px;
+        &:before {
+            content: '';
+            background: url(../img/airway/tick-inside-circle.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 50%;
+            left: -20%;
+            @include transform( translate(-50%,
+            -50%));
+        }
+    }
+    .airway-text {
+        min-height: inherit;
     }
 }
 
