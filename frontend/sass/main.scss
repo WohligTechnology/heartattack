@@ -335,6 +335,10 @@ header {
     margin: 0;
 }
 
+.display-inblock {
+    display: inline-block;
+}
+
 .content-sec {
     .margin--bottom {
         margin-bottom: 20px;
@@ -825,5 +829,61 @@ header {
     }
 }
 
+// My Account Css
+.page-head1 {
+    .tab-head ul {
+        li a {
+            text-transform: uppercase;
+            font-size: 40px;
+            color: $bg-color;
+            margin: 0 18px;
+            border: 2px solid transparent;
+            &:hover,
+            &:focus {
+                border-bottom: 2px solid $bg-color;
+                outline: none;
+                text-decoration: none;
+            }
+        }
+        li+li {
+            a {
+                &:before {
+                    content: '';
+                    display: block;
+                    border-left: 3px solid #404040;
+                    height: 28px;
+                    margin: 14px -3px;
+                    position: absolute;
+                }
+            }
+        }
+    }
+}
+
+.user-input {
+    border-bottom: 1px solid #e3e3e3;
+    .bottom-margin {
+        margin: 8px 0;
+    }
+    .form-group {
+        .input-control {
+            width: 65%;
+            .form-control {
+                border: 1px solid transparent;
+                &:focus {
+                    border: 1px solid transparent;
+                }
+            }
+        }
+    }
+    .edit-height {
+        line-height: 2.5;
+        color: $bg-color;
+    }
+}
+
+// .input-control {
+//     width: 75%;
+// }
 @import "fancybox-override";
 @import "mobile";

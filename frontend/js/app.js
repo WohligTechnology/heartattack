@@ -33,6 +33,11 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
             templateUrl: "frontend/views/template.html",
             controller: 'airwayCtrl'
         })
+        .state('myaccount', {
+            url: "/myaccount",
+            templateUrl: "frontend/views/template.html",
+            controller: 'myaccountCtrl'
+        })
         .state('form', {
             url: "/form",
             templateUrl: "frontend/views/template.html",
