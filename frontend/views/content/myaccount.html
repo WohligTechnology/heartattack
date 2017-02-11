@@ -99,7 +99,41 @@
                 </div>
             </div>
             <div class="package" ng-if="view=='package'">
-                package
+                <div class="package-table">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Serial No</th>
+                                <th>Decsription</th>
+                                <th>Price</th>
+                                <th>Data</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="package in packageBought">
+                                <td>{{package.serial}}</td>
+                                <td>
+                                    <div class="table__img display-inblock">
+                                        <img src="{{package.image}}" alt="" class="img-responsive">
+                                    </div>
+                                    <div class="table__text display-inblock">
+                                        {{package.description}}
+                                    </div>
+                                </td>
+                                <td>{{package.price}}</td>
+                                <td>{{package.data}}</td>
+                                <td>
+                                    <button class="btn btn-default btn-active-orange text-uppercase">Buy For $30</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-default btn-green text-uppercase">know more</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
