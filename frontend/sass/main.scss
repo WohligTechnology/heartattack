@@ -111,6 +111,7 @@ footer {
     .btn-envelope {
         background: $bg-color;
         color: $white;
+        border-color: $bg-color;
     }
     .copyright-text {
         color: $white;
@@ -831,13 +832,23 @@ header {
 
 // My Account Css
 .page-head1 {
+    .tab-head {
+        margin-bottom: 20px;
+    }
+    .profile-img {
+        min-height: 255px;
+        background-size: cover;
+        background-position: 100% 100%;
+        background-image: url("../img/myaccount/applicant.jpg");
+        background-repeat: no-repeat;
+    }
     .tab-head ul {
         li a {
             text-transform: uppercase;
             font-size: 40px;
             color: $bg-color;
             margin: 0 18px;
-            border: 2px solid transparent;
+            border-bottom: 2px solid transparent;
             &:hover,
             &:focus {
                 border-bottom: 2px solid $bg-color;
@@ -894,6 +905,7 @@ header {
         tr>td {
             text-align: center;
             vertical-align: middle;
+            border-bottom: 1px solid #ddd;
         }
         .table__img {
             width: 50px;
@@ -907,6 +919,45 @@ header {
         .table__text {
             vertical-align: middle;
         }
+        .btn__padding {
+            padding: 4px 12px;
+            font-size: 12px;
+            border-radius: 2px;
+            width: 110px;
+        }
+    }
+}
+
+// My Ccount Css
+.mycart-table {
+    border-collapse: separate;
+    border-spacing: 0 6px;
+    @extend .package-table;
+    thead,
+    tbody {
+        // tr {
+        //     border: 1px solid #ddd;
+        // }
+        tr {
+            td {
+                border: 1px solid #ddd;
+                border-right: none;
+            }
+            td+td {
+                border-left: none;
+            }
+            td:last-child {
+                border-right: 1px solid #ddd;
+            }
+        }
+    }
+    tfoot>tr>td {
+        border-bottom: 1px solid #ddd;
+    }
+    .quantity__input {
+        text-align: center;
+        width: 45px;
+        height: 45px;
     }
 }
 

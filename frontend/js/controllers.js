@@ -1,21 +1,21 @@
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'ui.swiper'])
 
-.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal) {
-    $scope.template = TemplateService.changecontent("home"); //Use same name of .html file
-    $scope.menutitle = NavigationService.makeactive("Home"); //This is the Title of the Website
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
+    .controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal) {
+        $scope.template = TemplateService.changecontent("home"); //Use same name of .html file
+        $scope.menutitle = NavigationService.makeactive("Home"); //This is the Title of the Website
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
 
-    $scope.mySlides = [
-        'frontend/img/banner/bg-home.jpg',
-        'frontend/img/banner/bg-home.jpg',
-        'frontend/img/banner/bg-home.jpg',
-        'frontend/img/banner/bg-home.jpg'
-    ];
+        $scope.mySlides = [
+            'frontend/img/banner/bg-home.jpg',
+            'frontend/img/banner/bg-home.jpg',
+            'frontend/img/banner/bg-home.jpg',
+            'frontend/img/banner/bg-home.jpg'
+        ];
 
-})
+    })
 
-.controller('FormCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('FormCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("form"); //Use same name of .html file
         $scope.menutitle = NavigationService.makeactive("Form"); //This is the Title of the Website
         TemplateService.title = $scope.menutitle;
@@ -64,15 +64,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         console.log('$scope.myArray ', $scope.myArray);
 
         $scope.imgFootscetion = [{
-                image: "frontend/img/orientation/switch-img-1.jpg",
-                thumbnail: "advanced"
-            }, {
-                image: "frontend/img/orientation/switch-img-2.jpg",
-                thumbnail: "cardiothoracic icu rotation"
-            }, {
-                image: "frontend/img/orientation/switch-img-3.jpg",
-                thumbnail: "european diploma in intensice care preparation pack"
-            }
+            image: "frontend/img/orientation/switch-img-1.jpg",
+            thumbnail: "advanced"
+        }, {
+            image: "frontend/img/orientation/switch-img-2.jpg",
+            thumbnail: "cardiothoracic icu rotation"
+        }, {
+            image: "frontend/img/orientation/switch-img-3.jpg",
+            thumbnail: "european diploma in intensice care preparation pack"
+        }
             //  {
             //     image: "frontend/img/orientation/switch-img-1.jpg",
             //     thumbnail: "image2"
@@ -184,6 +184,32 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }]
 
     })
+    .controller('mycartCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+        $scope.template = TemplateService.changecontent("mycart"); //Use same name of .html file
+        $scope.menutitle = NavigationService.makeactive("My Cart"); //This is the Title of the Website
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+
+        $scope.myCart = [{
+            serial: "01",
+            image: "frontend/img/myaccount/airway-img-4.png",
+            particulars: "Orientation - Haematology",
+            amount: "49.99$",
+            total: "20 Oct 2016"
+        }, {
+            serial: "02",
+            image: "frontend/img/myaccount/switch-img-2.jpg",
+            particulars: "Cardiothoracic ICU Rotation - Generic",
+            amount: "49.99$",
+            total: "20 Oct 2016"
+        }, {
+            serial: "03",
+            image: "frontend/img/myaccount/airway-img-2.png",
+            particulars: "Orientation - CT Surgery",
+            amount: "49.99$",
+            total: "20 Oct 2016"
+        }]
+    })
     .controller('headerctrl', function ($scope, TemplateService, $uibModal) {
         $scope.template = TemplateService;
         $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
@@ -203,27 +229,27 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         };
     })
 
-.controller('languageCtrl', function ($scope, TemplateService, $translate, $rootScope) {
+    .controller('languageCtrl', function ($scope, TemplateService, $translate, $rootScope) {
 
-    $scope.changeLanguage = function () {
-        console.log("Language CLicked");
+        $scope.changeLanguage = function () {
+            console.log("Language CLicked");
 
-        if (!$.jStorage.get("language")) {
-            $translate.use("hi");
-            $.jStorage.set("language", "hi");
-        } else {
-            if ($.jStorage.get("language") == "en") {
+            if (!$.jStorage.get("language")) {
                 $translate.use("hi");
                 $.jStorage.set("language", "hi");
             } else {
-                $translate.use("en");
-                $.jStorage.set("language", "en");
+                if ($.jStorage.get("language") == "en") {
+                    $translate.use("hi");
+                    $.jStorage.set("language", "hi");
+                } else {
+                    $translate.use("en");
+                    $.jStorage.set("language", "en");
+                }
             }
-        }
-        //  $rootScope.$apply();
-    };
+            //  $rootScope.$apply();
+        };
 
 
-})
+    })
 
-;
+    ;
