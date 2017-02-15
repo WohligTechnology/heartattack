@@ -6,6 +6,7 @@
 @import "../../bower_components/angular-ui-swiper/dist/angular-ui-swiper";
 @import "../../bower_components/fancyBox/source/jquery.fancybox";
 @import "../../bower_components/smart-app-banner/smart-app-banner";
+@import url('https://fonts.googleapis.com/css?family=Catamaran');
 
 /* Bootstrap Variables Goes Here */
 
@@ -29,6 +30,26 @@ $footer-bg-color: #404040;
     src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
 
+@font-face {
+    font-family: 'Catamaran-Lt';
+    src: url("../fonts/Catamaran-Light.ttf");
+}
+
+@font-face {
+    font-family: 'Catamaran-Md';
+    src: url("../fonts/Catamaran-Medium.ttf");
+}
+
+@font-face {
+    font-family: 'Catamaran-sb';
+    src: url("../fonts/Catamaran-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: 'Catamaran-r';
+    src: url("../fonts/Catamaran-Regular.ttf");
+}
+
 @mixin placeholder {
     $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
     @each $placeholder in $placeholders {
@@ -38,9 +59,11 @@ $footer-bg-color: #404040;
     }
 }
 
-// body {
-//     padding-top: 70px;
-// }
+body {
+    // padding-top: 70px;
+    font-family: Catamaran-r;
+}
+
 img.loading {
     text-align: center;
     opacity: 1;
@@ -191,16 +214,41 @@ header {
     }
     .search {
         margin-top: 35px;
+        .input--bgcolor {
+            background: #f2f2f2;
+            border: 1px solid transparent;
+            &:focus,
+            &:hover {
+                outline: none;
+                background: #f2f2f2;
+                border: 1px solid transparent;
+            }
+            &:active {
+                box-shadow: none;
+            }
+        }
     }
     .registration {
         margin-top: 40px;
         ul li a {
             font-size: 18px;
         }
+        ul li {
+            padding: 0 6px;
+        }
         li+li {
             a {
-                border-left: 1px solid black;
-                padding-left: 5px;
+                position: relative;
+                // border-left: 1px solid black;
+                // padding-left: 5px;
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    border-left: 2px solid black;
+                    height: 16px;
+                    margin: 4px -9px;
+                }
             }
         }
     }
@@ -214,6 +262,40 @@ header {
         color: #fff;
         text-transform: uppercase;
         font-size: 16px;
+    }
+}
+
+.custom-menu {
+    .custom-nav {
+        float: none;
+        text-align: center;
+        li {
+            display: inline-block;
+            a {
+                position: relative;
+            }
+        }
+        li+li {
+            .space__line {
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    border-left: 2px solid #369563;
+                    width: 1px;
+                    height: 14px;
+                    margin: 2px -16px;
+                }
+            }
+        }
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .cart-img {
+        width: 30px;
+        opacity: 1;
+        margin: 8px 4px;
     }
 }
 

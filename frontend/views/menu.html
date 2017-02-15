@@ -1,6 +1,6 @@
-<ul class="nav navbar-nav">
+<ul class="nav navbar-nav custom-nav">
   <li ng-repeat="menu in navigation" class="{{menu.classis}}">
-    <a ui-sref="{{menu.anchor}}" ng-if="menu.anchor">{{menu.name}}</a>
+    <a class="space__line" ui-sref="{{menu.anchor}}" ng-if="menu.anchor">{{menu.name}}</a>
     <a href="{{menu.link}}" ng-if="menu.link">{{menu.name}}</a>
     <ul class="dropdown-menu" ng-if="menu.subnav!='';">
       <li ng-repeat="submenu in menu.subnav">
@@ -8,5 +8,8 @@
         <a herf="{{submenu.link}}" ng-if="submenu.link">{{submenu.name}}</a>
       </li>
     </ul>
+  </li>
+  <li class="pull-right cart-img">
+    <img src="frontend/img/icons/cart.png" alt="" class="img-responsive">
   </li>
 </ul>
