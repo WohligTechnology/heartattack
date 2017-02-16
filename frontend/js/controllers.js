@@ -210,6 +210,20 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             total: "20 Oct 2016"
         }]
     })
+    .controller('privacyCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+        $scope.template = TemplateService.changecontent("privacypolicy"); //Use same name of .html file
+        $scope.menutitle = NavigationService.makeactive("Privacy Policy"); //This is the Title of the Website
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+
+    })
+    .controller('contactCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+        $scope.template = TemplateService.changecontent("contact"); //Use same name of .html file
+        $scope.menutitle = NavigationService.makeactive("Contact"); //This is the Title of the Website
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+
+    })
     .controller('headerctrl', function ($scope, TemplateService, $uibModal) {
         $scope.template = TemplateService;
         $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {

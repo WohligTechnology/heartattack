@@ -43,6 +43,16 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
             templateUrl: "frontend/views/template.html",
             controller: 'mycartCtrl'
         })
+        .state('privacypolicy', {
+            url: "/privacypolicy",
+            templateUrl: "frontend/views/template.html",
+            controller: 'privacyCtrl'
+        })
+        .state('contact', {
+            url: "/contact",
+            templateUrl: "frontend/views/template.html",
+            controller: 'contactCtrl'
+        })
         .state('form', {
             url: "/form",
             templateUrl: "frontend/views/template.html",

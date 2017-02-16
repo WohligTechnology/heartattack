@@ -1011,6 +1011,10 @@ header {
 }
 
 // My Ccount Css
+.mycart-table>tfoot>tr>td {
+    border: none;
+}
+
 .mycart-table {
     border-collapse: separate;
     border-spacing: 0 6px;
@@ -1035,11 +1039,33 @@ header {
     }
     tfoot>tr>td {
         border-bottom: 1px solid #ddd;
+        font-size: 18px;
+        color: $bg-color;
+        font-weight: bold;
+        text-align: right;
     }
     .quantity__input {
         text-align: center;
         width: 45px;
         height: 45px;
+        margin: 0 4px;
+    }
+    .square__bg {
+        background: #dedede;
+        padding: 5px;
+        font-size: 10px;
+    }
+}
+
+//Privacy Policy
+.privacy-content {
+    margin: 30px 0 50px;
+}
+
+.custom-maps {
+    iframe {
+        width: 100%;
+        height: 450px;
     }
 }
 
