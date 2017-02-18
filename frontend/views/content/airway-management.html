@@ -10,29 +10,38 @@
             </p>
         </div>
     </div>
-    <div>
-        <img src="frontend/img/airway/airway-banner.jpg" alt="" class="img-responsive">
+    <div class="bg-banner-text">
+        <img src="frontend/img/airway/bg-airway.jpg" alt="" class="img-responsive">
+        <!--<div class="bg-banner__txt">
+            <div class="display-inblock">
+                <h1 class="text-uppercase">Buy this entire</h1>
+                <h2 class="text-uppercase">sub-category for</h2>
+            </div>
+            <div class="display-inblock">
+                <button class="btn btn-default">Buy Now</button>
+            </div>
+        </div>-->
     </div>
-    <div class="container">
-        <div class="img-section-head">
+    <div class=" container ">
+        <div class="img-section-head ">
             <p>you can also buy an individual</p>
             <p>test starting from $3</p>
         </div>
-        <div class="btn-section">
-            <div class="row" ng-repeat="btnsec in btnrepeat">
-                <div class="col-md-4 padd2" ng-repeat="btns in btnsec">
-                    <div class="btn btn-block bg-grey btn-relative">
-                        <div class="btn-management block-inline">
+        <div class="btn-section ">
+            <div class="row " ng-repeat="btnsec in btnrepeat ">
+                <div class="col-md-4 padd2 " ng-repeat="btns in btnsec ">
+                    <div class="btn btn-block bg-grey btn-relative ">
+                        <div class="btn-management block-inline ">
                             <p>{{btns.name}}</p>
                         </div>
-                        <div class="block-inline pull-right">
-                            <button class="btn btn-default btn-green text-uppercase">{{btns.btnname}}</button>
+                        <div class="block-inline pull-right ">
+                            <button class="btn btn-default btn-green text-uppercase ">{{btns.btnname}}</button>
                         </div>
                         <!--block for overlay on button starts here-->
-                        <!--<div class="divoverlay">
-                            <div class="btn__overlay">
+                        <!--<div class="divoverlay ">
+                            <div class="btn__overlay ">
                             </div>
-                            <div class="btn__complete">
+                            <div class="btn__complete ">
                                 completed
                             </div>
                         </div>-->
@@ -40,17 +49,17 @@
                 </div>
             </div>
         </div>
-        <div class="img-footer-section">
+        <div class="img-footer-section ">
             <div>
                 <h1>Switch To:</h1>
             </div>
-            <div class="img-repeatfooter">
-                <div class="row" ng-repeat="data1 in footerArray">
+            <div class="img-repeatfooter ">
+                <div class="row " ng-repeat="data1 in footerArray ">
                     <!--<pre>{{footarray.thumbnail}}</pre>-->
-                    <div class="col-md-3" ng-repeat="data in data1">
-                        <div class="thumbnail padd0 thumbnail-radius">
+                    <div class="col-md-3 " ng-repeat="data in data1 ">
+                        <div class="thumbnail padd0 thumbnail-radius ">
                             <img ng-src="{{data.image}} " alt=" " class="img-responsive ">
-                            <div class="caption caption-text airway-text">
+                            <div class="caption caption-text airway-text ">
                                 <p>{{data.thumbnail}}</p>
                             </div>
                         </div>
