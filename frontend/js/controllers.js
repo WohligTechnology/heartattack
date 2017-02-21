@@ -224,6 +224,33 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.navigation = NavigationService.getnav();
 
     })
+    .controller('checkoutCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+        $scope.template = TemplateService.changecontent("checkout"); //Use same name of .html file
+        $scope.menutitle = NavigationService.makeactive("Checkout"); //This is the Title of the Website
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+
+        $scope.packageBought = [{
+            serial: "01",
+            image: "frontend/img/myaccount/airway-img-4.png",
+            description: "Orientation - Haematology",
+            price: "49.99$",
+            data: "20 Oct 2016"
+        }, {
+            serial: "02",
+            image: "frontend/img/myaccount/switch-img-2.jpg",
+            description: "Cardiothoracic ICU Rotation - Generic",
+            price: "49.99$",
+            data: "20 Oct 2016"
+        }, {
+            serial: "03",
+            image: "frontend/img/myaccount/airway-img-2.png",
+            description: "Orientation - CT Surgery",
+            price: "49.99$",
+            data: "20 Oct 2016"
+        }]
+
+    })
     .controller('headerctrl', function ($scope, TemplateService, $uibModal) {
         $scope.template = TemplateService;
         $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {

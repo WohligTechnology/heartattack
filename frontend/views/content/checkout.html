@@ -1,0 +1,303 @@
+<div class="checkout">
+    <div>
+        <img src="frontend/img/icu-orientation/icu-orientation-banner.jpg" alt="" class="img-responsive">
+    </div>
+    <div class="page-head1">
+        <div class="container">
+            <div class="tab-head text-center">
+                <ul ng-init="view='step1'">
+                    <li ng-click="view='step1'">
+                        <a href="">step1</a>
+                    </li>
+                    <li ng-click="view='step2'">
+                        <a href="">step2</a>
+                    </li>
+                    <li ng-click="view='step3'">
+                        <a href="">step3</a>
+                    </li>
+                    <li ng-click="view='step4'">
+                        <a href="">step4</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="profile" ng-if="view=='step1'">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="login-form minheight">
+                            <div class="row marg0">
+                                <div class="col-md-3">
+                                    <h3>login</h3>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="checkout-login">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Email Address">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Password">
+                                        </div>
+                                    </div>
+                                    <div class="login-forgot">
+                                        <div class="login__btn display-inblock">
+                                            <button class="btn btn-default btn-green text-uppercase">Log In</button>
+                                        </div>
+                                        <div class="display-inblock">
+                                            <a href="">Forgot Password?</a>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="row">
+                                            <div class="col-md-10">
+                                                <p class="or__line text-center">or</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-10">
+                                                <a href=" " class="btn btn-block social-btn facebook">
+                                                    <span class="facebook"><i class="fa fa-facebook " aria-hidden="true"></i></span>Log
+                                                    In with Facebook
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-10">
+                                                <a href=" " class="btn btn-block social-btn twitter">
+                                                    <span class="twitter"><i class="fa fa-twitter " aria-hidden="true"></i></span>Log
+                                                    In with Twitter
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-10">
+                                                <a href=" " class="btn btn-block social-btn google">
+                                                    <span class="google"><i class="fa fa-google-plus " aria-hidden="true"></i></span>Log
+                                                    In with Google+
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="login-form minheight">
+                            <div class="row marg0">
+                                <div class="col-md-3">
+                                    <h3>sign up</h3>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="checkout-signup">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="First Name">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Last Name">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Email Address">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="password" class="form-control" placeholder="Password">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="password" class="form-control" placeholder="Confirm Password">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Contact US">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="login-forgot">
+                                        <div class="login__btn">
+                                            <button class="btn btn-default btn-green text-uppercase">sign up</button>
+                                        </div>
+                                        <div class="terms-privacy">
+                                            <div class="checkbox-custom">
+                                                <!--<div class="custom__check"></div>-->
+                                                <input type="checkbox" value="">
+                                                <label><span></span>I Agree With The Term &amp; Condition And Privacy Policy</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <p class="signup-or__line text-center">or</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <a href=" " class="btn btn-block social-btn facebook">
+                                                    <span class="facebook"><i class="fa fa-facebook " aria-hidden="true"></i></span>Log
+                                                    In with Facebook
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <a href=" " class="btn btn-block social-btn twitter">
+                                                    <span class="twitter"><i class="fa fa-twitter " aria-hidden="true"></i></span>Log
+                                                    In with Twitter
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <a href=" " class="btn btn-block social-btn google">
+                                                    <span class="google"><i class="fa fa-google-plus " aria-hidden="true"></i></span>Log
+                                                    In with Google+
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="package" ng-if="view=='step2'">
+                <div class="package-table">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Serial No</th>
+                                <th>Decsription</th>
+                                <th>Price</th>
+                                <th>Data</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="package in packageBought">
+                                <td>{{package.serial}}</td>
+                                <td>
+                                    <div class="text-left">
+                                        <div class="table__img display-inblock">
+                                            <img src="{{package.image}}" alt="" class="img-responsive">
+                                        </div>
+                                        <div class="table__text display-inblock">
+                                            <span>{{package.description}}</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>{{package.price}}</td>
+                                <td>{{package.data}}</td>
+                                <td>
+                                    <button class="btn btn-default btn-green btn__padding text-uppercase">View Invoice</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-default btn-active-orange btn__padding text-uppercase">Active</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="profile" ng-if="view=='step3'">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="profile-img">
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <form name="userdetail">
+                                    <div class="user-input">
+                                        <div class="form-group bottom-margin">
+                                            <label for="name">Name:</label>
+                                            <div class="display-inblock input-control">
+                                                <input id="name" type="text" class="form-control" placeholder="">
+                                            </div>
+                                            <div class="display-inblock pull-right edit-height">
+                                                <a href="">Edit</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="user-input">
+                                        <div class="form-group bottom-margin">
+                                            <label for="email">Email:</label>
+                                            <div class="display-inblock input-control">
+                                                <input id="email" type="text" class="form-control" placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="user-input">
+                                        <div class="form-group bottom-margin">
+                                            <label for="password">Password:</label>
+                                            <div class="display-inblock input-control">
+                                                <input id="password" type="password" class="form-control" placeholder="">
+                                            </div>
+                                            <div class="display-inblock pull-right edit-height">
+                                                <a href="">Change Password</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="package" ng-if="view=='step4'">
+                <div class="package-table">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Serial No</th>
+                                <th>Decsription</th>
+                                <th>Price</th>
+                                <th>Data</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="package in packageBought">
+                                <td>{{package.serial}}</td>
+                                <td>
+                                    <div class="text-left">
+                                        <div class="table__img display-inblock">
+                                            <img src="{{package.image}}" alt="" class="img-responsive">
+                                        </div>
+                                        <div class="table__text display-inblock">
+                                            <span>{{package.description}}</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>{{package.price}}</td>
+                                <td>{{package.data}}</td>
+                                <td>
+                                    <button class="btn btn-default btn-green btn__padding text-uppercase">View Invoice</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-default btn-active-orange btn__padding text-uppercase">Active</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

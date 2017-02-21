@@ -48,6 +48,11 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
             templateUrl: "frontend/views/template.html",
             controller: 'privacyCtrl'
         })
+        .state('checkout', {
+            url: "/checkout",
+            templateUrl: "frontend/views/template.html",
+            controller: 'checkoutCtrl'
+        })
         .state('contact', {
             url: "/contact",
             templateUrl: "frontend/views/template.html",
