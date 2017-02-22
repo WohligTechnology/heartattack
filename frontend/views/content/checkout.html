@@ -1,6 +1,6 @@
 <div class="checkout">
     <div>
-        <img src="frontend/img/icu-orientation/icu-orientation-banner.jpg" alt="" class="img-responsive">
+        <img src="frontend/img/banner/checkout.jpg" alt="" class="img-responsive">
     </div>
     <div class="page-head1">
         <div class="container">
@@ -132,8 +132,8 @@
                                         <div class="terms-privacy">
                                             <div class="checkbox-custom">
                                                 <!--<div class="custom__check"></div>-->
-                                                <input type="checkbox" value="">
-                                                <label><span></span>I Agree With The Term &amp; Condition And Privacy Policy</label>
+                                                <input type="checkbox" id="option1" value="">
+                                                <label for="option1"><span></span>I Agree With The Term &amp; Condition And Privacy Policy</label>
                                             </div>
                                         </div>
                                     </div>
@@ -214,89 +214,92 @@
                 </div>
             </div>
             <div class="profile" ng-if="view=='step3'">
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="profile-img">
-                                </div>
+                <div class="step3-section">
+                    <div class="display-inblock">
+                        <p class="input-headings">
+                            your<br> details
+                        </p>
+                    </div>
+                    <div class="display-inblock">
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="firstname" placeholder="First Name">
                             </div>
-                            <div class="col-md-9">
-                                <form name="userdetail">
-                                    <div class="user-input">
-                                        <div class="form-group bottom-margin">
-                                            <label for="name">Name:</label>
-                                            <div class="display-inblock input-control">
-                                                <input id="name" type="text" class="form-control" placeholder="">
-                                            </div>
-                                            <div class="display-inblock pull-right edit-height">
-                                                <a href="">Edit</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="user-input">
-                                        <div class="form-group bottom-margin">
-                                            <label for="email">Email:</label>
-                                            <div class="display-inblock input-control">
-                                                <input id="email" type="text" class="form-control" placeholder="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="user-input">
-                                        <div class="form-group bottom-margin">
-                                            <label for="password">Password:</label>
-                                            <div class="display-inblock input-control">
-                                                <input id="password" type="password" class="form-control" placeholder="">
-                                            </div>
-                                            <div class="display-inblock pull-right edit-height">
-                                                <a href="">Change Password</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="lastname" placeholder="Last Name">
                             </div>
-                        </div>
+                            <div class="form-group">
+                                <input type="number" class="form-control" id="contact" placeholder="Contact Number">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" placeholder="Enter email">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="step3-section">
+                    <div class="display-inblock">
+                        <p class="input-headings">
+                            billing<br>Address
+                        </p>
+                    </div>
+                    <div class="display-inblock">
+                        <form class="form-inline billing-address">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="line1" placeholder="Line1">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="line2" placeholder="Line2">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="line3" placeholder="Line3">
+                            </div>
+                        </form>
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="firstname" placeholder="City">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="lastname" placeholder="Pincode">
+                            </div>
+                            <div class="form-group">
+                                <!--<input type="number" class="form-control" id="contact" placeholder="State">-->
+                                <select class="form-control state__width" id="state">
+                                    <option value="" selected disabled>State</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="country" placeholder="Country">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="step3-section">
+                    <div class="display-inblock">
+                        <p class="input-headings">
+                            payment<br> process
+                        </p>
+                    </div>
+                    <div class="display-inblock">
+                        <form class="payment-buttons">
+                            <label class="radio-inline">
+                                <input type="radio" name="optradio">Credit Card
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="optradio">Debit Card
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="optradio">Net Banking
+                            </label>
+                        </form>
                     </div>
                 </div>
             </div>
             <div class="package" ng-if="view=='step4'">
-                <div class="package-table">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Serial No</th>
-                                <th>Decsription</th>
-                                <th>Price</th>
-                                <th>Data</th>
-                                <th></th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr ng-repeat="package in packageBought">
-                                <td>{{package.serial}}</td>
-                                <td>
-                                    <div class="text-left">
-                                        <div class="table__img display-inblock">
-                                            <img src="{{package.image}}" alt="" class="img-responsive">
-                                        </div>
-                                        <div class="table__text display-inblock">
-                                            <span>{{package.description}}</span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>{{package.price}}</td>
-                                <td>{{package.data}}</td>
-                                <td>
-                                    <button class="btn btn-default btn-green btn__padding text-uppercase">View Invoice</button>
-                                </td>
-                                <td>
-                                    <button class="btn btn-default btn-active-orange btn__padding text-uppercase">Active</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
             </div>
         </div>
     </div>
