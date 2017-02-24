@@ -141,7 +141,7 @@ footer {
         .copyright-text__color {
             color: $white;
         }
-        a{
+        a {
             cursor: pointer;
         }
     }
@@ -304,7 +304,25 @@ header {
 }
 
 // Home Page
+// .slider-position {
+//     position: relative;
+//     .slider-content {
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//     }
+// }
 .homeslider {
+    position: relative;
+    .slider-content {
+        p {
+            font-size: 16px;
+        }
+        position: absolute;
+        top: 34%;
+        left: 6%;
+        width: 30%;
+    }
     .flexslider {
         margin: 0;
         border: none;
