@@ -26,7 +26,7 @@
                         <div class="login-form minheight">
                             <div class="row marg0">
                                 <div class="col-md-3">
-                                    <h3>login</h3>
+                                    <h3 class="head-step1 temp-head">login</h3>
                                 </div>
                                 <div class="col-md-9">
                                     <div class="checkout-login">
@@ -41,7 +41,7 @@
                                         <div class="login__btn display-inblock">
                                             <button class="btn btn-default btn-green text-uppercase">Log In</button>
                                         </div>
-                                        <div class="display-inblock">
+                                        <div class="display-inblock forgot-passwd">
                                             <a href="">Forgot Password?</a>
                                         </div>
                                     </div>
@@ -84,7 +84,7 @@
                         <div class="login-form minheight">
                             <div class="row marg0">
                                 <div class="col-md-3">
-                                    <h3>sign up</h3>
+                                    <h3 class="head-step1 text-right">sign up</h3>
                                 </div>
                                 <div class="col-md-9">
                                     <div class="checkout-signup">
@@ -165,6 +165,9 @@
                                                     <span class="google"><i class="fa fa-google-plus " aria-hidden="true"></i></span>Log
                                                     In with Google+
                                                 </a>
+                                                <div class="text-center already-register">
+                                                    <p classs="marg0">Already Registered? Log in</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -175,42 +178,50 @@
                 </div>
             </div>
             <div class="package" ng-if="view=='step2'">
-                <div class="package-table">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Serial No</th>
-                                <th>Decsription</th>
-                                <th>Price</th>
-                                <th>Data</th>
-                                <th></th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr ng-repeat="package in packageBought">
-                                <td>{{package.serial}}</td>
-                                <td>
-                                    <div class="text-left">
-                                        <div class="table__img display-inblock">
-                                            <img src="{{package.image}}" alt="" class="img-responsive">
-                                        </div>
-                                        <div class="table__text display-inblock">
-                                            <span>{{package.description}}</span>
-                                        </div>
+                <table class="table mycart-table">
+                    <thead>
+                        <tr>
+                            <th>Serial No</th>
+                            <th>Particulars</th>
+                            <th>Quantity</th>
+                            <th>Amount</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="cart in myCart">
+                            <td>{{cart.serial}}</td>
+                            <td>
+                                <div class="text-left">
+                                    <div class="table__img display-inblock">
+                                        <img src="{{cart.image}}" alt="" class="img-responsive">
                                     </div>
-                                </td>
-                                <td>{{package.price}}</td>
-                                <td>{{package.data}}</td>
-                                <td>
-                                    <button class="btn btn-default btn-green btn__padding text-uppercase">View Invoice</button>
-                                </td>
-                                <td>
-                                    <button class="btn btn-default btn-active-orange btn__padding text-uppercase">Active</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                                    <div class="table__text display-inblock">
+                                        <span>{{cart.particulars}}</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span>01</span>
+                            </td>
+                            <td><span>{{cart.amount}}</span></td>
+                            <td><span>{{cart.total}}</span></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="6"><span>Subtotal: $170.98</span></td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <div class="row">
+                    <div class="col-md-5 pull-right">
+                        <div class="row">
+                            <div class="col-md-6 pull-right">
+                                <button class="btn btn-default btn-block btn-green">Next</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="profile" ng-if="view=='step3'">
@@ -296,6 +307,11 @@
                                 <input type="radio" name="optradio">Net Banking
                             </label>
                         </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" login__btn col-md-2 col-md-push-5">
+                        <button class="btn btn-default btn-green btn-block text-uppercase">continue</button>
                     </div>
                 </div>
             </div>

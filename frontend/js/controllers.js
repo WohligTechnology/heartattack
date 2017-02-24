@@ -230,24 +230,24 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
 
-        $scope.packageBought = [{
+        $scope.myCart = [{
             serial: "01",
             image: "frontend/img/myaccount/airway-img-4.png",
-            description: "Orientation - Haematology",
-            price: "49.99$",
-            data: "20 Oct 2016"
+            particulars: "Orientation - Haematology",
+            amount: "49.99$",
+            total: "51.99$"
         }, {
             serial: "02",
             image: "frontend/img/myaccount/switch-img-2.jpg",
-            description: "Cardiothoracic ICU Rotation - Generic",
-            price: "49.99$",
-            data: "20 Oct 2016"
+            particulars: "Cardiothoracic ICU Rotation - Generic",
+            amount: "49.99$",
+            total: "61.99$"
         }, {
             serial: "03",
             image: "frontend/img/myaccount/airway-img-2.png",
-            description: "Orientation - CT Surgery",
-            price: "49.99$",
-            data: "20 Oct 2016"
+            particulars: "Orientation - CT Surgery",
+            amount: "49.99$",
+            total: "71.99$"
         }]
 
     })

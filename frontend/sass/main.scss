@@ -704,6 +704,7 @@ header {
     margin-top: 10px;
     span {
         position: absolute;
+        // left: -36px;
         left: 0;
         padding: 6px 12px;
         top: 0;
@@ -713,6 +714,7 @@ header {
         background: #3b5997;
         span {
             background: #354f88;
+            min-width: 37px;
         }
     }
     &.twitter {
@@ -1157,6 +1159,13 @@ header {
 
 //Checkout
 .checkout {
+    .already-register {
+        //temporary solution for already register
+        margin-top: 10px;
+        p {
+            margin: 0;
+        }
+    }
     .or__line {
         &:before,
         &:after {
@@ -1164,8 +1173,16 @@ header {
         }
     }
     .login-forgot {
+        .login__btn {
+            .btn-green {
+                border-radius: 2px;
+            }
+        }
         .display-inblock {
             vertical-align: middle;
+        }
+        .forgot-passwd {
+            margin-left: 24px;
         }
     }
     .checkout-login {
@@ -1189,6 +1206,10 @@ header {
     &:after {
         width: 94px;
     }
+}
+
+.terms-privacy {
+    margin-top: 20px;
 }
 
 .checkbox-custom {
@@ -1257,6 +1278,32 @@ header {
     //     }
     // }
     // }
+}
+
+.temp-head {
+    //temporary css for checkout css step1
+    margin-left: -28px !important;
+    min-width: 90px !important;
+}
+
+.head-step1 {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+    color: #3bb874;
+    min-width: 140px;
+    position: relative;
+    &:after {
+        content: '';
+        display: block;
+        border-right: 2px solid;
+        position: absolute;
+        height: 72px;
+        top: 0;
+        right: -12px;
+    }
 }
 
 .step3-section {
