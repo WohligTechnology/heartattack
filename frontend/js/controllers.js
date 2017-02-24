@@ -207,19 +207,18 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             image: "frontend/img/myaccount/airway-img-4.png",
             particulars: "Orientation - Haematology",
             amount: "49.99$",
-            total: "20 Oct 2016"
+            total: "49.99$"
         }, {
             serial: "02",
             image: "frontend/img/myaccount/switch-img-2.jpg",
             particulars: "Cardiothoracic ICU Rotation - Generic",
             amount: "49.99$",
-            total: "20 Oct 2016"
+            total: "49.99$"
         }, {
             serial: "03",
             image: "frontend/img/myaccount/airway-img-2.png",
             particulars: "Orientation - CT Surgery",
-            amount: "49.99$",
-            total: "20 Oct 2016"
+            amount: "49.99$"
         }]
     })
     .controller('privacyCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
